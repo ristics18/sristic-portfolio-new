@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  readonly COPYRIGHT = "Copyright © 2025 - " + new Date().getFullYear() + " - Srđan Ristić";
+  readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srđan Ristić";
 }

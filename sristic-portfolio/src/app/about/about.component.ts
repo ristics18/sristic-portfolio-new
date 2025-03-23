@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   readonly CURRENT_YEAR = new Date().getFullYear();
+  readonly YEARS_OF_EXPERIENCE = new Date().getFullYear() - 2018;
 }

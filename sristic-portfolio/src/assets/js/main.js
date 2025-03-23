@@ -45,6 +45,20 @@
         });
     }
 
+    // Counter Animation - Works with Angular Components
+    function initCounterUp() {
+        if ($.fn.counterUp) {
+            $(".counter:not(.counter-initialized)").each(function () {
+                $(this).counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+                $(this).addClass("counter-initialized"); // Prevents multiple initializations
+            });
+        }
+    }
+
+
     /****************************************
      *   Initialize Swiper Sliders
      *****************************************/
@@ -129,12 +143,7 @@
         initAllSliders();
 
         // Counter Animation
-        if ($.fn.counterUp) {
-            $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-        }
+        initCounterUp();
 
         // Video Popup
         if ($.fn.venobox) {

@@ -1,1 +1,125 @@
-<p>contact works!</p>
+<!-- ...::: Start Breadcrumb Section :::... -->
+<div class="breadcrumb-section section-bg overflow-hidden pos-relative">
+    <div class="breadcrumb-shape-top-left"></div>
+    <div class="breadcrumb-shape-bottom-right"></div>
+    <div class="breadcrumb-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="title">Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...::: End Breadcrumb Section :::... -->
+
+<!-- ...::: Start Contact Section :::... -->
+<div class="contact-section section-gap-tb-165">
+    <div class="contact-box pos-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Start Map Area-->
+                    <div class="map">
+                        <div class="gmap-box">
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Chicago,IL&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                    </div>
+                    <!-- End Map Area -->
+                </div>
+            </div>
+            <div class="row flex-lg-row flex-column-reverse">
+                <div class="col-lg-4">
+                    <div class="contact-sidebar-wapper">
+                        <div class="contact-sidebar">
+                            <!-- Start Project Sidebar Item -->
+                            <ul class="contact-sidebar-list-item">
+                                <!-- Start contact Single Box -->
+                                <li class="contact-sidebar-single-box">
+                                    <h6 class="title-text">Phone:</h6>
+                                    <a href="tel:+13189441294" class="link">+1 318-944-1294</a>
+                                </li>
+                                <!-- End contact Single Box -->
+                                <!-- Start contact Single Box -->
+                                <li class="contact-sidebar-single-box">
+                                    <h6 class="title-text">Email:</h6>
+                                    <a href="mailto:srdanristic2@gmail.com" class="link">srdanristic2&#64;gmail.com</a>
+                                </li>
+                                <!-- End contact Single Box -->
+                                <!-- Start contact Single Box -->
+                                <li class="contact-sidebar-single-box">
+                                    <h6 class="title-text">Website:</h6>
+                                    <a href="/" class="link">www.srdanristic.com</a>
+                                </li>
+                                <!-- End contact Single Box -->
+                            </ul>
+                            <!-- End Project Sidebar Item -->
+                        </div>
+                        <!-- Start Sidebar Widget Single Item - Social Widgets -->
+                        <div class="sidebar-widget-single-area ">
+                            <h3 class="title">Follow Me</h3>
+                            <ul class="social-link">
+                                <li><a href="https://www.linkedin.com/in/srdan-ristic/" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com/srdjan.ristic.surge/" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/srdjan__ristic/" target="_blank"><i class="icofont-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- End Sidebar Widget Single Item - Social Widgets -->
+                    </div>
+                </div>
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="contact-form-wrapper section-mt-165">
+                        <!-- Start Section Content -->
+                        <div class="content">
+                            <span class="section-tag">Get In Touch</span>
+                            <h2 class="title">Let's Connect!</h2>
+                        </div>
+                        <!-- End Section Content -->
+
+                        <!-- Start Contact Form Box -->
+                        <div class="contact-form-box">
+                            <form #contactForm="ngForm" id="contact-form" class="default-form contact-form">
+                                <div class="row mb-n6">
+                                    <!-- Name Field -->
+                                    <div class="col-xl-6 mb-6">
+                                        <div class="default-form-group">
+                                            <input name="name" type="text" placeholder="Name" [(ngModel)]="formData.name" required>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Email Field -->
+                                    <div class="col-xl-6 mb-6">
+                                        <div class="default-form-group">
+                                            <input name="email" type="email" placeholder="Email" [(ngModel)]="formData.email" required>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Message Field -->
+                                    <div class="col-xl-12 mb-6">
+                                        <div class="default-form-group">
+                                            <textarea name="message" placeholder="Message" [(ngModel)]="formData.message" required></textarea>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Submit Button -->
+                                    <div class="col-12 mb-6">
+                                        <div class="default-form-group text-center">
+                                            <a [href]="generateMailtoLink()" class="btn btn-lg btn-outline-one" [class.disabled]="!contactForm.valid">Submit Message</a>
+                                        </div>
+                                    </div>
+                            
+                                    <p class="form-messege"></p>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End Contact Form Box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...::: End Contact Section :::... -->

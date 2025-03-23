@@ -1963,7 +1963,7 @@ p:last-child {
 .project-box-single-item .catagory-nav-item li::after {
   position: absolute;
   content: "/";
-  left: calc(100% + 5px);
+  left: calc(100% + 2px);
 }
 .project-box-single-item .catagory-nav-item li:last-child::after {
   display: none;

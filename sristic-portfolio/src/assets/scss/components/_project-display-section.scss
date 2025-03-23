@@ -109,7 +109,7 @@
             &::after{
                 position: absolute;
                 content: "/";
-                left: calc(100% + 5px);
+                left: calc(100% + 2px);
             }
 
             &:last-child::after{
