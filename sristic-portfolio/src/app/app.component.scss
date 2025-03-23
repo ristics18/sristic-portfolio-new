@@ -1,0 +1,84 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Lendix
+    Template Description: Lendex - Personal Portfolio Bootstrap Template
+    Version: 1.0
+    Template Author: Hasthemes
+    Template URL: https://hasthemes.com/
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    -> Base - Default CSS
+
+    -> Component - Slider
+    -> Component - Hero
+    -> Component - Service Display
+    -> Component - Skill Progress Display
+    -> Component - Counterup Display
+    -> Component - Project Display
+    -> Component - Testimonial Display
+    -> Component - Company Logo Display
+    -> Component - Blog Feed Display
+    -> Component - Video Card Display
+    -> Component - Resume Display
+    -> Component - Breadcrumb
+    -> Component - Sidebar Widgets
+    -> Component - Pricing Area
+    -> Component - Pagination
+    -> Component - Tag box
+    -> Component - Comment
+
+
+    -> Pages - Project
+    -> Pages - Blog
+    -> Pages - FAQ
+    -> Pages - Contact
+    -> Pages - 404 Error
+
+
+    -> Layout - Header
+    -> Layout - Footer
+
+-----------------------------------------------------------------------------------*/
+
+
+// Default
+@import "../assets/scss/base/mixins";
+@import "../assets/scss/base/common";
+
+
+// Components
+@import "../assets/scss/components/slider";
+@import "../assets/scss/components/hero";
+@import "../assets/scss/components/service-display";
+@import "../assets/scss/components/skill-progress-display";
+@import "../assets/scss/components/counterup-display";
+@import "../assets/scss/components/project-display-section";
+@import "../assets/scss/components/testimonial-display";
+@import "../assets/scss/components/company-logo-display";
+@import "../assets/scss/components/blog-feed-display";
+@import "../assets/scss/components/video-info-display";
+@import "../assets/scss/components/resume-info-display";
+@import "../assets/scss/components/breadcrumb";
+@import "../assets/scss/components/sidebar-widget";
+@import "../assets/scss/components/pricing-area";
+@import "../assets/scss/components/pagination";
+@import "../assets/scss/components/tag-box";
+@import "../assets/scss/components/comment";
+
+
+// Pages
+@import "../assets/scss/pages/projects";
+@import "../assets/scss/pages/blog";
+@import "../assets/scss/pages/faq";
+@import "../assets/scss/pages/contact";
+@import "../assets/scss/pages/404-error";
+
+// Layout
+@import "../assets/scss/layouts/header";
+@import "../assets/scss/layouts/footer";
+
+@import "../assets/scss/base/material-scroll-top";
