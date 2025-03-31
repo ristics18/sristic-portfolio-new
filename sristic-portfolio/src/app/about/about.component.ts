@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { AppConstants } from '../constants/app.constants';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrl: './about.component.scss',
+  providers: [AppConstants]
 })
 export class AboutComponent {
-  readonly CURRENT_YEAR = new Date().getFullYear();
-  readonly YEARS_OF_EXPERIENCE = new Date().getFullYear() - 2018;
+  constructor(public constants: AppConstants) {}
 }

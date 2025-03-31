@@ -1,1 +1,151 @@
-<p>project-details works!</p>
+<!-- ...::: Start Breadcrumb Section :::... -->
+<div class="breadcrumb-section section-bg overflow-hidden pos-relative">
+    <div class="breadcrumb-shape-top-left"></div>
+    <div class="breadcrumb-shape-bottom-right"></div>
+    <div class="breadcrumb-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="title">{{project.ProjectName}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...::: End Breadcrumb Section :::... -->
+
+<!-- .....:::::: Start Project Details Section :::::.... -->
+<div class="project-details-section section-gap-tb-165">
+    <div class="project-details-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Start Project Content Section -->
+                    <div class="project-content-section pos-relative">
+                        <div class="project-hero-image">
+                            <img src="../../assets/images/project/{{project.ProjectImage}}" alt="N/A">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <!-- Start Section Content -->
+                                <div class="default-content-style pos-relative">
+                                    <h2 class="title">{{project.ProjectName}}</h2>
+                                    <p>{{project.ProjectDesciption}}</p>
+
+                                    <h3 class="sub-title">Key Details</h3>
+
+                                    <ul class="content-list-item content-list-with-icon">
+                                        <li>
+                                            <div class="left">
+                                                <div class="icon">
+                                                    <i class="icofont-code"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <h4 class="list-title">Technologies</h4>
+                                                <p>
+                                                    <ng-container *ngIf="project.ProjectTechnologies?.length > 0; else noTech">
+                                                        <span *ngFor="let projectTechnology of project.ProjectTechnologies; let i = index">
+                                                          {{ projectTechnology.TechnologyName }}
+                                                          <span *ngIf="i < project.ProjectTechnologies.length - 1"> | </span>
+                                                        </span>
+                                                      </ng-container>
+                                                      
+                                                      <ng-template #noTech>
+                                                        <span>N/A</span>
+                                                      </ng-template>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="left">
+                                                <div class="icon">
+                                                    <i class="icofont-light-bulb"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <h4 class="list-title">Idea Purpose</h4>
+                                                <p>{{project.ProjectPurpose}}</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="left">
+                                                <div class="icon">
+                                                    <i class="icofont-chart-growth"></i>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <h4 class="list-title">Key Contributions</h4>
+                                                <p>{{project.ProjectContributions}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Section Content -->
+                            </div>
+                            <div class="col-xl-3 col-lg-4 offset-xl-1">
+                                <div class="project-sidebar">
+                                    <h3 class="title">Information</h3>
+                                    <!-- Start Project Sidebar Item -->
+                                    <ul class="project-sidebar-list-item">
+                                        <!-- Start Project Single Box -->
+                                        <li class="project-sidebar-single-box">
+                                            <h6 class="title-text">Live View:</h6>
+                                            <ng-container *ngIf="project.ProjectLiveViewLink; else noLiveView">
+                                                <a [href]="project.ProjectLiveViewLink" target="_blank" rel="noopener">
+                                                  <div class="left">
+                                                    <div class="icon">
+                                                      <i class="icofont-external-link"></i>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </ng-container>
+                                              <ng-template #noLiveView>
+                                                <div class="left">
+                                                  <div class="icon">N/A</div>
+                                                </div>
+                                              </ng-template>
+                                        </li>
+                                        <!-- End Project Single Box -->
+                                        <!-- Start Project Single Box -->
+                                        <li class="project-sidebar-single-box">
+                                            <h6 class="title-text">References:</h6>
+                                            <span class="text" *ngFor="let projectReference of project.ProjectReferences">
+                                                <ng-container *ngIf="projectReference.ProjectReferenceLink">
+                                                  <a [href]="projectReference.ProjectReferenceLink" target="_blank" style="text-decoration: underline;">
+                                                    <span class="text">{{ projectReference.ProjectReferenceName }}</span>
+                                                  </a>
+                                                  <br />
+                                                </ng-container>
+                                              </span>
+                                        </li>
+                                        <!-- End Project Single Box -->
+                                        <!-- Start Project Single Box -->
+                                        <li class="project-sidebar-single-box">
+                                            <h6 class="title-text">Date:</h6>
+                                            <span class="text">{{project.ProjectDate}}</span>
+                                        </li>
+                                        <!-- End Project Single Box -->
+                                         <!-- Start Project Single Box -->
+                                        <li class="project-sidebar-single-box">
+                                            <h6 class="title-text">Status:</h6>
+                                            <span class="text">{{project.ProjectStatus}}</span>
+                                        </li>
+                                        <!-- End Project Single Box -->
+                                    </ul>
+                                    <!-- End Project Sidebar Item -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Project Content Section -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .....:::::: End Project Details Section :::::.... -->
