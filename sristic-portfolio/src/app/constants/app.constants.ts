@@ -178,7 +178,7 @@ export class AppConstants {
           skillName: "PowerShell"
         },
         {
-          skillName: "Agents"
+          skillName: "Build Agents"
         },
         {
           skillName: "Security"
@@ -212,8 +212,8 @@ export class AppConstants {
     {
       AwardName: "Forward-Thinking Award",
       AwardOrg: "RedSail Technologies",
-      AwardDesc: "Srđan is our 2024 Annual FORTE Award Winner! His award is for Forward-Thinking!",
-      AwardLink: "https://drive.google.com/file/d/1SQNCkKuZrj_9SlUB9k7d62jzsbLuywVP/view"
+      AwardDesc: "Srđan is RedSail 2024 Annual Forward-Thinking FORTE Award Winner!",
+      AwardLink: "https://drive.google.com/file/d/17D8LiHrUxZWf8O9ll8HdriRPp3o6Jrx-/view?usp=sharing"
     },
     {
       AwardName: "Outstanding Student Award",
@@ -259,10 +259,10 @@ export class AppConstants {
       ProjectImage: 'work.png',
       ProjectImageTech: '',
       ProjectStatus: 'In Progress',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Build the country\'s most clinically advanced and financially sustainable pharmacy network',
+      ProjectContributions: 'Building PMS software. Leading a team. Enhansing infrastructure security. Improving software performance. Building products.',
       ProjectLiveViewLink: '',
-      ProjectCategory: 'other', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'other', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'RedSail Technologies',
@@ -308,10 +308,10 @@ export class AppConstants {
       ProjectImage: 'metTalks.png',
       ProjectImageTech: '',
       ProjectStatus: 'Complete',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Share my experience of studying abroad with students who study at the University of Metropolitan. Provide details on what the requirements are to get enrolled and acquire necessary visa to study in the US.',
+      ProjectContributions: 'Share my experience of how I became a masters student at LSUS.',
       ProjectLiveViewLink: '',
-      ProjectCategory: 'talks', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'talks', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Univerzitet Metropolitan',
@@ -331,15 +331,15 @@ export class AppConstants {
     {
       ProjectId: 3,
       ProjectName: 'Soccer Notifier',
-      ProjectDesciption: 'Developed web application that allows soccer players to subscribe to their teams with phone numbers and/or email addresses. The system consumes the subscriptions and notifies players based on already built games schedule.',
+      ProjectDesciption: 'Developed a web application that allows soccer players to subscribe to their teams with phone numbers and/or email addresses. The system consumes the subscriptions and notifies players based on already built games schedule.',
       ProjectDate: '2021',
       ProjectImage: 'soccer-notifier.png',
       ProjectImageTech: 'soccer-notifier-aws.png',
       ProjectStatus: 'Complete',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Help soccer players get notified about their upcoming games.',
+      ProjectContributions: 'Developed a notification system by web scraping existing website which consists of indoor soccer schedules.',
       ProjectLiveViewLink: 'https://soccernotifier.s3.us-east-1.amazonaws.com/index.html',
-      ProjectCategory: 'web', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'web', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Live View',
@@ -383,10 +383,10 @@ export class AppConstants {
       ProjectImage: 'word-sym.png',
       ProjectImageTech: 'word-sym-aws.png',
       ProjectStatus: 'Complete',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Help non English speakers learn new words by using synonyms.',
+      ProjectContributions: 'Developed an iOS app.',
       ProjectLiveViewLink: '',
-      ProjectCategory: 'mobile', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'mobile', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Word Synonyms',
@@ -427,10 +427,10 @@ export class AppConstants {
       ProjectImage: 'udemyThumbnail.png',
       ProjectImageTech: 'udemyCourse.mp4',
       ProjectStatus: 'Complete',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Help developers get ready for Oracle Certified Associate Java SE 8 certification exam.',
+      ProjectContributions: 'Developed a Udemy course with practice exams.',
       ProjectLiveViewLink: 'https://www.udemy.com/oracle-certified-associate-java-se-8-practice-exams/',
-      ProjectCategory: 'courses', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'course', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Udemy Course',
@@ -471,10 +471,10 @@ export class AppConstants {
       ProjectImage: 'portfolio.png',
       ProjectImageTech: 'portfolio-aws.png',
       ProjectStatus: 'Complete',
-      ProjectPurpose: 'Purpose',
-      ProjectContributions: 'Contributions',
+      ProjectPurpose: 'Developed a website which represents who I am.',
+      ProjectContributions: 'Developed a web application.',
       ProjectLiveViewLink: 'https://www.srdanristic.com/',
-      ProjectCategory: 'web', // web, mobile, talks, research, courses, other
+      ProjectCategory: 'web', // web, mobile, talks, research, course, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Live View',
@@ -507,6 +507,309 @@ export class AppConstants {
         },
         {
           TechnologyName: 'AWS Certificate Manager'
+        },
+        {
+          TechnologyName: 'Git'
+        }
+      ]
+    },
+    {
+      ProjectId: 7,
+      ProjectName: 'LSUS Advisor\'s Tool',
+      ProjectDesciption: 'This is a system developed at LSUS. The idea of the system is to generate curriculum worksheets based on student\'s transcript.',
+      ProjectDate: '2017',
+      ProjectImage: 'advisorsTool.png',
+      ProjectImageTech: 'advisorsTool.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Build a web application that will help students with course advising.',
+      ProjectContributions: 'Built a web application.',
+      ProjectLiveViewLink: 'https://sun.cs.lsus.edu/advisors-tool/index.php',
+      ProjectCategory: 'web', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'Live View',
+          ProjectReferenceLink: 'https://sun.cs.lsus.edu/advisors-tool/index.php'
+        },
+        {
+          ProjectReferenceName: 'Student Advising',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Non Profit',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'PHP 7'
+        },
+        {
+          TechnologyName: 'HTML/CSS/Bootstrap'
+        },
+        {
+          TechnologyName: 'MySQL'
+        },
+        {
+          TechnologyName: 'Bootstrap'
+        },
+        {
+          TechnologyName: 'Regular Expressions'
+        },
+        {
+          TechnologyName: 'Subversion'
+        }
+      ]
+    },
+    {
+      ProjectId: 8,
+      ProjectName: 'Education Tool',
+      ProjectDesciption: 'This is a system developed with the idea to help medical students at LSUHSC learn by going through cases provided by their professors.',
+      ProjectDate: '2017 - 2018',
+      ProjectImage: 'education-tool.png',
+      ProjectImageTech: 'education-tool.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Build a web application to help medical students with studying by going through real world case exams.',
+      ProjectContributions: 'Built a web application.',
+      ProjectLiveViewLink: 'https://www.lsuhs.edu/',
+      ProjectCategory: 'web', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'Live View',
+          ProjectReferenceLink: 'https://www.lsuhs.edu/'
+        },
+        {
+          ProjectReferenceName: 'Case Studying',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Medical School',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'PHP 7'
+        },
+        {
+          TechnologyName: 'HTML/CSS/Bootstrap'
+        },
+        {
+          TechnologyName: 'MySQL'
+        },
+        {
+          TechnologyName: 'Bootstrap'
+        },
+        {
+          TechnologyName: 'Charts.js'
+        },
+        {
+          TechnologyName: 'Subversion'
+        }
+      ]
+    },
+    {
+      ProjectId: 9,
+      ProjectName: 'Laboratory for Biomedical Informatics',
+      ProjectDesciption: 'I worked as a Graduate Research Assistant at LSUS. My work was focused on biomedical informatics projects.',
+      ProjectDate: '2017 - 2018',
+      ProjectImage: 'labi.png',
+      ProjectImageTech: 'labi.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Help doctors from LSUHSC with their research by doing data analysis and building graphs that represent outcomes.',
+      ProjectContributions: 'Data Analysis. Research. Development.',
+      ProjectLiveViewLink: 'http://www.labi.lsus.edu',
+      ProjectCategory: 'research', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'Live View',
+          ProjectReferenceLink: 'http://www.labi.lsus.edu'
+        },
+        {
+          ProjectReferenceName: 'Case Studying',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Medical School',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'R'
+        },
+        {
+          TechnologyName: 'Java'
+        },
+        {
+          TechnologyName: 'MySQL'
+        },
+        {
+          TechnologyName: 'WEKA'
+        },
+        {
+          TechnologyName: 'Orange'
+        },
+        {
+          TechnologyName: 'Git'
+        },
+        {
+          TechnologyName: 'Subversion'
+        }
+      ]
+    },
+    {
+      ProjectId: 10,
+      ProjectName: 'Orbit',
+      ProjectDesciption: 'A mobile application that helps school systems with the communication between parents and teachers.',
+      ProjectDate: '2017 - 2018',
+      ProjectImage: 'orbit.png',
+      ProjectImageTech: 'orbit.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Build mobile application to help schools with communication between parents and teachers.',
+      ProjectContributions: 'Built mobile application.',
+      ProjectLiveViewLink: '',
+      ProjectCategory: 'mobile', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'LSUS',
+          ProjectReferenceLink: 'https://www.lsus.edu/'
+        },
+        {
+          ProjectReferenceName: 'Communication',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Schools',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Parent-Teacher',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'Java/Android'
+        },
+        {
+          TechnologyName: 'Spring Boot'
+        },
+        {
+          TechnologyName: 'REST'
+        },
+        {
+          TechnologyName: 'Jenkins'
+        },
+        {
+          TechnologyName: 'AWS'
+        },
+        {
+          TechnologyName: 'Git'
+        }
+      ]
+    },
+    {
+      ProjectId: 11,
+      ProjectName: 'High Altitude Solar Eclipse Observer',
+      ProjectDesciption: 'This project consisted of creating and developing a payload for NASA competition that took place in Palestine, TX.',
+      ProjectDate: '2017',
+      ProjectImage: 'highAltitudeSEO.png',
+      ProjectImageTech: 'highAltitudeSEO.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Build a payload to monitor and fetch the data during solar eclipse.',
+      ProjectContributions: 'Built a styrofoam payload. Wrote scripts for RaspberryPi. Collected data. Build diagrams to present results.',
+      ProjectLiveViewLink: '',
+      ProjectCategory: 'other', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'LSUS',
+          ProjectReferenceLink: 'https://www.lsus.edu/'
+        },
+        {
+          ProjectReferenceName: 'Solar Eclipse',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'RaspberryPi',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Research',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'Python'
+        },
+        {
+          TechnologyName: 'Gnuplot'
+        },
+        {
+          TechnologyName: 'HTML/CSS/JavaScript'
+        },
+        {
+          TechnologyName: 'RaspberryPi'
+        },
+        {
+          TechnologyName: 'Sensors'
+        },
+        {
+          TechnologyName: 'Raspbian'
+        }
+      ]
+    },
+    {
+      ProjectId: 12,
+      ProjectName: 'Twitter Data Collecting and Analyzing',
+      ProjectDesciption: 'This is a web project that is used for Twitter data collecting and visualizing based on hashtags provided.',
+      ProjectDate: '2016',
+      ProjectImage: 'capstone-project.png',
+      ProjectImageTech: 'capstone-project.png',
+      ProjectStatus: 'Complete',
+      ProjectPurpose: 'Collect data from Twitter by using Twitter Real Time API. Data collection based on hashtags.',
+      ProjectContributions: 'Built data collection tool that uses Twitter Real Time API to collect data during 2016 Olympics in Rio.',
+      ProjectLiveViewLink: '',
+      ProjectCategory: 'web', // web, mobile, talks, research, course, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'Metropolitan',
+          ProjectReferenceLink: 'https://www.metropolitan.ac.rs/en/'
+        },
+        {
+          ProjectReferenceName: 'Twitter',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Research',
+          ProjectReferenceLink: ''
+        },
+        {
+          ProjectReferenceName: 'Big Data',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'Java'
+        },
+        {
+          TechnologyName: 'Maven'
+        },
+        {
+          TechnologyName: 'MySQL'
+        },
+        {
+          TechnologyName: 'Spring'
+        },
+        {
+          TechnologyName: 'REST'
+        },
+        {
+          TechnologyName: 'AngularJS'
+        },
+        {
+          TechnologyName: 'AWS'
         },
         {
           TechnologyName: 'Git'
