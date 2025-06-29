@@ -10,12 +10,12 @@ export class AppConstants {
   readonly MY_FIRST_NAME = "Srđan";
   readonly MY_LAST_NAME = "Ristić";
   readonly MY_LOGO = "logo.png";
-  readonly MY_IMAGE = "portrait-hero.png";
+  readonly MY_IMAGE = "srdan_portrait_main.png";
   readonly MY_TITLE = "Software Engineer";
   readonly MY_EMAIL = "srdanristic2@gmail.com";
   readonly MY_PHONE = "318-944-1294";
   readonly MY_RESUME = "Srdan_Ristic_Resume.pdf";
-  readonly MY_ABOUT_ME_IMAGE = "srdan_ristic_portrait.png";
+  readonly MY_ABOUT_ME_IMAGE = "srdan_portrait.png";
   readonly MY_WEBSITE = "srdanristic.com";
 
   readonly MY_GITHUB = "https://github.com/ristics18";
