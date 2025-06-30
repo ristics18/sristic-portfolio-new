@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { AssistantAiComponent } from './assistant-ai/assistant-ai.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'project/:id', component: ProjectDetailsComponent},
   { path: 'contact', component: ContactComponent },
+  { path: 'assistant-ai', component: AssistantAiComponent },
   { path: '**', component: HomeComponent },
 ];
