@@ -146,9 +146,9 @@
         initCounterUp();
 
         // Video Popup
-        if ($.fn.venobox) {
-            $('.wave-btn').venobox();
-        }
+        // if ($.fn.venobox) {
+        //     $('.wave-btn').venobox();
+        // }
 
         // Project Filter
         if ($.fn.imagesLoaded && $.fn.isotope) {
