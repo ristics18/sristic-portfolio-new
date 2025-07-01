@@ -19,17 +19,18 @@
     <div class="row justify-content-center">
       <div class="col-xl-12 col-lg-10">
         <div class="bg-color-extra03 p-4 shadow d-flex flex-column" style="height: 600px;">
-          
-          <!-- Message List -->
           <div class="chat-scroll-area flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3 px-2" #chatBox>
             <div *ngFor="let msg of messages" class="d-flex" [ngClass]="msg.role === 'user' ? 'justify-content-end' : 'justify-content-start'">
-              <div class="chat-bubble" [ngClass]="msg.role === 'user' ? 'bg-color-primary text-white' : 'bg-color-light text-black'">
-                {{ msg.content }}
+              <div class="chat-bubble" [ngClass]="msg.role === 'user' ? 'bg-color-primary text-white' : 'bg-color-light text-black'">{{ msg.content }}</div>
+            </div>
+            <div class="d-flex justify-content-start" *ngIf="typing">
+              <div class="chat-bubble bg-color-light text-black typing-indicator">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
-
-          <!-- Chat Input -->
           <form class="chat-input-form mt-2 px-2 pt-2 pb-1" (submit)="sendMessage()">
             <div class="position-relative">
               <textarea
@@ -59,7 +60,9 @@
               </button>
             </div>
           </form>
-
+          <div *ngIf="errorMessage" class="text-danger small mt-1 ps-2">
+            {{ errorMessage }}
+          </div>
         </div>
       </div>
     </div>
