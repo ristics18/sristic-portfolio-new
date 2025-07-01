@@ -15,49 +15,54 @@
 </div>
 
 <div class="section-gap-tb-165 bg-dark-blue py-md-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-12 col-lg-10">
-                <div class="chat-box-wrapper bg-color-extra03 p-4 shadow d-flex flex-column" style="height: 600px;">
-                <div class="flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3">
-                    <div class="d-flex justify-content-start">
-                    <div class="chat-bubble bg-color-light text-black">
-                        Hi! I am here to answer questions about Srdan, let's chat!
-                    </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                    <div class="chat-bubble bg-color-primary text-white">
-                        Hi there!
-                    </div>
-                    </div>
-                </div>
-                <form class="chat-input-form mt-2 px-2 pt-2 pb-1">
-                    <div class="position-relative">
-                        <textarea
-                            class="form-control text-white border-0"
-                            placeholder="Ask anything about Srdan..."
-                            rows="1"
-                            style="
-                                padding: 12px 48px 12px 16px;
-                                background-color: #252734;
-                                resize: none;
-                                overflow-y: hidden;
-                                line-height: 1.4;
-                                white-space: pre-wrap;
-                            "
-                            required
-                            (input)="autoResize($event)"
-                            ></textarea>
-                        <button type="submit"
-                                class="send-btn position-absolute"
-                                style="top: 50%; right: 12px; transform: translateY(-50%); background: none; border: none;"
-                                id="sendMessageButton">
-                            <i class="icofont-arrow-up text-white fs-4"></i>
-                        </button>
-                    </div>
-                </form>
-                </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-12 col-lg-10">
+        <div class="bg-color-extra03 p-4 shadow d-flex flex-column" style="height: 600px;">
+          
+          <!-- Message List -->
+          <div class="chat-scroll-area flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3 px-2" #chatBox>
+            <div *ngFor="let msg of messages" class="d-flex" [ngClass]="msg.role === 'user' ? 'justify-content-end' : 'justify-content-start'">
+              <div class="chat-bubble" [ngClass]="msg.role === 'user' ? 'bg-color-primary text-white' : 'bg-color-light text-black'">
+                {{ msg.content }}
+              </div>
             </div>
+          </div>
+
+          <!-- Chat Input -->
+          <form class="chat-input-form mt-2 px-2 pt-2 pb-1" (submit)="sendMessage()">
+            <div class="position-relative">
+              <textarea
+                [(ngModel)]="message"
+                name="message"
+                class="form-control text-white border-0"
+                placeholder="Ask anything about Srdan..."
+                rows="1"
+                #messageInput
+                (input)="autoResize()"
+                (keydown)="handleKeydown($event)"
+                style="
+                  padding: 12px 48px 12px 16px;
+                  background-color: #252734;
+                  resize: none;
+                  overflow-y: hidden;
+                  line-height: 1.4;
+                  white-space: pre-wrap;
+                "
+                required
+              ></textarea>
+              <button type="submit"
+                      class="send-btn position-absolute"
+                      style="top: 50%; right: 12px; transform: translateY(-50%); background: none; border: none;"
+                      id="sendMessageButton">
+                <i class="icofont-arrow-up text-white fs-4"></i>
+              </button>
+            </div>
+          </form>
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
