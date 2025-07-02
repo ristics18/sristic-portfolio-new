@@ -257,7 +257,7 @@ export class AppConstants {
       ProjectDesciption: 'Initially joining PioneerRx as a Software Developer, I progressed to the role of Software Development Team Lead. Presently, I spearhead an offshore team comprising five skilled developers. Our primary objective is to enhance and construct a robust, fail-safe application tailored for independent pharmacies, ensuring superior performance and reliability.',
       ProjectDate: '2018 - Present',
       ProjectImage: 'work.png',
-      ProjectImageTech: '',
+      ProjectImageTech: 'work.png',
       ProjectStatus: 'In Progress',
       ProjectPurpose: 'Build the country\'s most clinically advanced and financially sustainable pharmacy network',
       ProjectContributions: 'Building PMS software. Leading a team. Enhansing infrastructure security. Improving software performance. Building products.',
@@ -302,11 +302,61 @@ export class AppConstants {
     },
     {
       ProjectId: 2,
+      ProjectName: 'Srđan\'s AI Assistant',
+      ProjectDesciption: 'This project is a custom AI assistant designed to answer questions about me using a Retrieval-Augmented Generation (RAG) approach, combining private data with OpenAI\'s language models. The assistant delivers highly personalized, private, and controllable AI interactions, enabling visitors to ask questions about my experience, background, and skills in natural language as if chatting with me.',
+      ProjectDate: '2025 - Present',
+      ProjectImage: 'ai-assistant.png',
+      ProjectImageTech: 'ai-assistant-tech.png',
+      ProjectStatus: 'In Progress',
+      ProjectPurpose: 'Build a tool that will allow people to get to know me as if they were talking to me.',
+      ProjectContributions: 'Built AI Assistant.',
+      ProjectLiveViewLink: 'https://www.srdanristic.com/ai-assistant',
+      ProjectCategory: 'ai', // web, mobile, talks, research, course, ai, other
+      ProjectReferences: [
+        {
+          ProjectReferenceName: 'Artificial Intelligence',
+          ProjectReferenceLink: 'https://www.srdanristic.com/ai-assistant'
+        },
+        {
+          ProjectReferenceName: 'OpenAI',
+          ProjectReferenceLink: 'https://openai.com/'
+        },
+        {
+          ProjectReferenceName: 'Chat',
+          ProjectReferenceLink: ''
+        },
+      ],
+      ProjectTechnologies:[
+        {
+          TechnologyName: 'C#'
+        },
+        {
+          TechnologyName: '.NET'
+        },
+        {
+          TechnologyName: 'Git'
+        },
+        {
+          TechnologyName: 'AWS Lambda'
+        },
+        {
+          TechnologyName: 'AWS Gateway'
+        },
+        {
+          TechnologyName: 'OpenAI APIs'
+        },
+        {
+          TechnologyName: 'CI/CD'
+        }
+      ]
+    },
+    {
+      ProjectId: 3,
       ProjectName: 'MetTalks',
       ProjectDesciption: 'I was invited to be a guest speaker at the MetTalks event. This event was organized by University Metropolitan, which is the university where I graduated with my Bachelors Degree in IT. Topic of discussion was Studying in Serbia vs studying in foreign countries. I was honored to be invited by my former mentor dr Miroslava Raspopovic Milic.',
       ProjectDate: '2021',
       ProjectImage: 'metTalks.png',
-      ProjectImageTech: '',
+      ProjectImageTech: 'metTalks.png',
       ProjectStatus: 'Complete',
       ProjectPurpose: 'Share my experience of studying abroad with students who study at the University of Metropolitan. Provide details on what the requirements are to get enrolled and acquire necessary visa to study in the US.',
       ProjectContributions: 'Share my experience of how I became a masters student at LSUS.',
@@ -329,7 +379,7 @@ export class AppConstants {
       ProjectTechnologies:[]
     },
     {
-      ProjectId: 3,
+      ProjectId: 4,
       ProjectName: 'Soccer Notifier',
       ProjectDesciption: 'Developed a web application that allows soccer players to subscribe to their teams with phone numbers and/or email addresses. The system consumes the subscriptions and notifies players based on already built games schedule.',
       ProjectDate: '2021',
@@ -376,7 +426,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 4,
+      ProjectId: 5,
       ProjectName: 'WordSym - iOS App',
       ProjectDesciption: 'Developed an iOS app that helps people learn new words from English dictionary. Core functionality of the app is to show an arbitrary word to a user and require them to provide a synonym for it. Once user provides a synonym, the app shows details about the word, as well as correct/incorrect response.',
       ProjectDate: '2020',
@@ -420,12 +470,12 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 5,
+      ProjectId: 6,
       ProjectName: 'Oracle CA Java SE 8 Practice Exams',
       ProjectDesciption: 'I have created this Udemy course with an idea to develop practice exams that will help students and developers prepare for OCA Java SE 8 Programmer I (1Z0-808) certification or Java interviews.',
       ProjectDate: '2019',
       ProjectImage: 'udemyThumbnail.png',
-      ProjectImageTech: 'udemyCourse.mp4',
+      ProjectImageTech: 'udemyThumbnail.png',
       ProjectStatus: 'Complete',
       ProjectPurpose: 'Help developers get ready for Oracle Certified Associate Java SE 8 certification exam.',
       ProjectContributions: 'Developed a Udemy course with practice exams.',
@@ -464,7 +514,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 6,
+      ProjectId: 7,
       ProjectName: 'Srđan Ristić Portfolio',
       ProjectDesciption: 'This is my personal website where you can find out more about my career and life.',
       ProjectDate: '2018 - Present',
@@ -514,7 +564,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 7,
+      ProjectId: 8,
       ProjectName: 'LSUS Advisor\'s Tool',
       ProjectDesciption: 'This is a system developed at LSUS. The idea of the system is to generate curriculum worksheets based on student\'s transcript.',
       ProjectDate: '2017',
@@ -561,7 +611,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 8,
+      ProjectId: 9,
       ProjectName: 'Education Tool',
       ProjectDesciption: 'This is a system developed with the idea to help medical students at LSUHSC learn by going through cases provided by their professors.',
       ProjectDate: '2017 - 2018',
@@ -608,7 +658,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 9,
+      ProjectId: 10,
       ProjectName: 'Laboratory for Biomedical Informatics',
       ProjectDesciption: 'I worked as a Graduate Research Assistant at LSUS. My work was focused on biomedical informatics projects.',
       ProjectDate: '2017 - 2018',
@@ -658,7 +708,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 10,
+      ProjectId: 11,
       ProjectName: 'Orbit',
       ProjectDesciption: 'A mobile application that helps school systems with the communication between parents and teachers.',
       ProjectDate: '2017 - 2018',
@@ -709,7 +759,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 11,
+      ProjectId: 12,
       ProjectName: 'High Altitude Solar Eclipse Observer',
       ProjectDesciption: 'This project consisted of creating and developing a payload for NASA competition that took place in Palestine, TX.',
       ProjectDate: '2017',
@@ -760,7 +810,7 @@ export class AppConstants {
       ]
     },
     {
-      ProjectId: 12,
+      ProjectId: 13,
       ProjectName: 'Twitter Data Collecting and Analyzing',
       ProjectDesciption: 'This is a web project that is used for Twitter data collecting and visualizing based on hashtags provided.',
       ProjectDate: '2016',
