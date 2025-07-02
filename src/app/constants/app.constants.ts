@@ -308,13 +308,13 @@ export class AppConstants {
       ProjectImage: 'ai-assistant.png',
       ProjectImageTech: 'ai-assistant-tech.png',
       ProjectStatus: 'In Progress',
-      ProjectPurpose: 'Build a tool that will allow people to get to know me as if they were talking to me.',
-      ProjectContributions: 'Built AI Assistant.',
+      ProjectPurpose: 'Build a tool that will allow people to get to know me as if they are talking to me.',
+      ProjectContributions: 'Built Srđan\'s AI Assistant.',
       ProjectLiveViewLink: 'https://www.srdanristic.com/ai-assistant',
       ProjectCategory: 'ai', // web, mobile, talks, research, course, ai, other
       ProjectReferences: [
         {
-          ProjectReferenceName: 'Artificial Intelligence',
+          ProjectReferenceName: 'Live View',
           ProjectReferenceLink: 'https://www.srdanristic.com/ai-assistant'
         },
         {

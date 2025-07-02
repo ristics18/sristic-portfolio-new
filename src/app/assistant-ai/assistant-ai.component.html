@@ -19,6 +19,11 @@
     <div class="row justify-content-center">
       <div class="col-xl-12 col-lg-10">
         <div class="bg-color-extra03 p-4 shadow d-flex flex-column" style="height: 600px;">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/images/generic/ai-assistant-transparent.png" alt="AI Assistant" width="32" height="32" />
+            <span class="fw-bold text-white">AI Assistant</span>
+          </div>
+          
           <div class="chat-scroll-area flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3 px-2" #chatBox>
             <ng-container *ngFor="let msg of messages">
               <div class="d-flex" [ngClass]="msg.role === 'user' ? 'justify-content-end' : 'justify-content-start'">
