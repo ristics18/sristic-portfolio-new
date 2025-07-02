@@ -16,7 +16,7 @@ export class AssistantAiComponent {
 
   message = '';
   messages: { role: 'user' | 'assistant'; content: string }[] = [
-    { role: 'assistant', content: "Hi! I am here to answer questions about Srdan, let's chat!" }
+    { role: 'assistant', content: "Hi! I am here to answer questions about Srđan, let's chat!" }
   ];
   message_length_max = 500;
   errorMessage = '';
