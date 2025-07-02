@@ -21,10 +21,13 @@ export class AssistantAiComponent {
   message_length_max = 500;
   errorMessage = '';
   typing = false;
+  isWaitingForResponse = false;
 
   constructor(private aiChatService: AiChatService) {}
 
   sendMessage(): void {
+    if (this.isWaitingForResponse) return;
+
     const trimmed = this.message.trim();
     if (!trimmed) return;
 
@@ -41,19 +44,37 @@ export class AssistantAiComponent {
     this.scrollToBottom();
 
     this.typing = true;
+    this.isWaitingForResponse = true;
 
     this.aiChatService.sendMessage(userInput).subscribe({
-    next: (res) => {
-      this.typing = false;
-      this.messages.push({ role: 'assistant', content: res.answer.trim() });
-      this.scrollToBottom();
-    },
-    error: () => {
-      this.typing = false;
-      this.messages.push({ role: 'assistant', content: 'Sorry, something went wrong. Try again.' });
-      this.scrollToBottom();
-    }
-  });
+      next: (res) => {
+        const fullAnswer = res.answer.trim();
+        const assistantMessage = { role: 'assistant' as const, content: '' };
+        this.messages.push(assistantMessage);
+        this.scrollToBottom();
+
+        this.typing = false;
+        
+        // Typing animation
+        let i = 0;
+        const interval = setInterval(() => {
+          if (i < fullAnswer.length) {
+            assistantMessage.content += fullAnswer.charAt(i++);
+            this.scrollToBottom();
+          } else {
+            clearInterval(interval);
+            this.typing = false;
+            this.isWaitingForResponse = false;
+          }
+        }, 20); // typing speed in ms
+      },
+      error: () => {
+        this.typing = false;
+        this.isWaitingForResponse = false;
+        this.messages.push({ role: 'assistant', content: 'Sorry, something went wrong. Try again.' });
+        this.scrollToBottom();
+      }
+    });
   }
 
   autoResize(): void {
