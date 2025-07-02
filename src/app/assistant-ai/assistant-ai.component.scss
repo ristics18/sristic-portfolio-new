@@ -108,3 +108,21 @@
     opacity: 1;
   }
 }
+
+.title-inline-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-inline-container .title {
+  margin: 0;
+}
+
+.ai-important-message {
+  margin-top: 30px !important;
+}
+
+.ai-important-message .tag-box {
+  padding: 20px 50px;
+}
