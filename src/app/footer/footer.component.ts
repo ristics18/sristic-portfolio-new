@@ -9,7 +9,7 @@ import { AppConstants } from '../constants/app.constants';
   providers: [AppConstants]
 })
 export class FooterComponent {
-  readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srđan Ristić";
+  readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srdjan Ristić";
 
   constructor(public constants: AppConstants) { this.COPYRIGHT = this.constants.COPYRIGHT; }
 }

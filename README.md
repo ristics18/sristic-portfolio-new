@@ -1,4 +1,4 @@
-# Srđan Ristić Website
+# Srdjan Ristić Website
 
 Hi! Welcome to repository that represents my personal website. I have developed my portfolio using Angular. Feel free to explore through the code and check out my website.
 

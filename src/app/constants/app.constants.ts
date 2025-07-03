@@ -7,7 +7,7 @@ export class AppConstants {
 
   readonly CURRENT_YEAR = new Date().getFullYear();
 
-  readonly MY_FIRST_NAME = "Srđan";
+  readonly MY_FIRST_NAME = "Srdjan";
   readonly MY_LAST_NAME = "Ristić";
   readonly MY_LOGO = "logo.png";
   readonly MY_IMAGE = "srdan_portrait_main.png";
@@ -212,13 +212,13 @@ export class AppConstants {
     {
       AwardName: "Forward-Thinking Award",
       AwardOrg: "RedSail Technologies",
-      AwardDesc: "Srđan is RedSail 2024 Annual Forward-Thinking FORTE Award Winner!",
+      AwardDesc: "Srdjan is RedSail 2024 Annual Forward-Thinking FORTE Award Winner!",
       AwardLink: "https://drive.google.com/file/d/17D8LiHrUxZWf8O9ll8HdriRPp3o6Jrx-/view?usp=sharing"
     },
     {
       AwardName: "Outstanding Student Award",
       AwardOrg: "LSU Shreveport",
-      AwardDesc: "University award presented to Srđan for outstanding academic achievements in Computer Systems Technology.",
+      AwardDesc: "University award presented to Srdjan for outstanding academic achievements in Computer Systems Technology.",
       AwardLink: "https://drive.google.com/file/d/1t7oczVsPBzQouz63hWJZfFhe97CrBVFp/view"
     }
   ]
@@ -302,14 +302,14 @@ export class AppConstants {
     },
     {
       ProjectId: 2,
-      ProjectName: 'Srđan\'s AI Assistant',
+      ProjectName: 'Srdjan\'s AI Assistant',
       ProjectDesciption: 'This project is a custom AI assistant designed to answer questions about me using a Retrieval-Augmented Generation (RAG) approach, combining private data with OpenAI\'s language models. The assistant delivers highly personalized, private, and controllable AI interactions, enabling visitors to ask questions about my experience, background, and skills in natural language as if chatting with me.',
       ProjectDate: '2025 - Present',
       ProjectImage: 'ai-assistant.png',
       ProjectImageTech: 'ai-assistant-tech.png',
       ProjectStatus: 'In Progress',
       ProjectPurpose: 'Build a tool that will allow people to get to know me as if they are talking to me.',
-      ProjectContributions: 'Built Srđan\'s AI Assistant.',
+      ProjectContributions: 'Built Srdjan\'s AI Assistant.',
       ProjectLiveViewLink: 'https://www.srdanristic.com/ai-assistant',
       ProjectCategory: 'ai', // web, mobile, talks, research, course, ai, other
       ProjectReferences: [
@@ -515,7 +515,7 @@ export class AppConstants {
     },
     {
       ProjectId: 7,
-      ProjectName: 'Srđan Ristić Portfolio',
+      ProjectName: 'Srdjan Ristić Portfolio',
       ProjectDesciption: 'This is my personal website where you can find out more about my career and life.',
       ProjectDate: '2018 - Present',
       ProjectImage: 'portfolio.png',
@@ -887,5 +887,5 @@ export class AppConstants {
     }
   ]
 
-  readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srđan Ristić";
+  readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srdjan Ristić";
 }
