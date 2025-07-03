@@ -315,7 +315,7 @@ export class AppConstants {
       ProjectReferences: [
         {
           ProjectReferenceName: 'Live View',
-          ProjectReferenceLink: 'https://www.srdanristic.com/ai-assistant'
+          ProjectReferenceLink: 'https://www.srdanristic.com/assistant-ai'
         },
         {
           ProjectReferenceName: 'OpenAI',
