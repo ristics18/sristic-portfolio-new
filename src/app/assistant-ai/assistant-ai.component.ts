@@ -24,8 +24,14 @@ export class AssistantAiComponent {
   typing = false;
   isWaitingForResponse = false;
   hasStartedChat = false;
+  conversationId = '';
 
   constructor(private aiChatService: AiChatService) {}
+
+  ngOnInit(): void {
+    this.conversationId = crypto.randomUUID();
+    console.log(this.conversationId)
+  }
 
   sendMessage(): void {
     if (this.isWaitingForResponse) return;
@@ -53,7 +59,7 @@ export class AssistantAiComponent {
     this.typing = true;
     this.isWaitingForResponse = true;
 
-    this.aiChatService.sendMessage(userInput).subscribe({
+    this.aiChatService.sendMessage(userInput, this.conversationId).subscribe({
       next: (res) => {
         const fullAnswer = res.answer.trim();
         const assistantMessage = { role: 'assistant' as const, content: '' };

@@ -7,7 +7,7 @@ import { ApiConstants } from '../constants/api.constants';
 export class AiChatService {
   constructor(private http: HttpClient) {}
 
-  sendMessage(input: string): Observable<{ answer: string }> {
-    return this.http.post<{ answer: string }>(ApiConstants.CHAT_API, { input });
+  sendMessage(input: string, conversationId: string): Observable<{ answer: string }> {
+    return this.http.post<{ answer: string }>(ApiConstants.CHAT_API, { input , conversationId });
   }
 }
