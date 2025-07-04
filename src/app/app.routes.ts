@@ -12,6 +12,6 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'project/:id', component: ProjectDetailsComponent},
   { path: 'contact', component: ContactComponent },
-  { path: 'assistant-ai', component: AssistantAiComponent },
+  { path: 'ai-assistant', component: AssistantAiComponent },
   { path: '**', component: HomeComponent },
 ];

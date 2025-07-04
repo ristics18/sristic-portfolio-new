@@ -30,7 +30,6 @@ export class AssistantAiComponent {
 
   ngOnInit(): void {
     this.conversationId = crypto.randomUUID();
-    console.log(this.conversationId)
   }
 
   sendMessage(): void {

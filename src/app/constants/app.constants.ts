@@ -310,12 +310,12 @@ export class AppConstants {
       ProjectStatus: 'In Progress',
       ProjectPurpose: 'Build a tool that will allow people to get to know me as if they are talking to me.',
       ProjectContributions: 'Built Srdjan\'s AI Assistant.',
-      ProjectLiveViewLink: 'https://www.srdanristic.com/assistant-ai',
+      ProjectLiveViewLink: 'https://www.srdanristic.com/ai-assistant',
       ProjectCategory: 'ai', // web, mobile, talks, research, course, ai, other
       ProjectReferences: [
         {
           ProjectReferenceName: 'Live View',
-          ProjectReferenceLink: 'https://www.srdanristic.com/assistant-ai'
+          ProjectReferenceLink: 'https://www.srdanristic.com/ai-assistant'
         },
         {
           ProjectReferenceName: 'OpenAI',
