@@ -13,6 +13,7 @@ import { AiChatService } from '../services/ai-chat-service';
 export class AssistantAiComponent {
   @ViewChild('chatBox') chatBoxRef!: ElementRef;
   @ViewChild('messageInput') messageInputRef!: ElementRef;
+  @ViewChild('chatContainer') chatContainer!: ElementRef;
 
   message = '';
   messages: { role: 'user' | 'assistant'; content: string }[] = [
@@ -22,6 +23,7 @@ export class AssistantAiComponent {
   errorMessage = '';
   typing = false;
   isWaitingForResponse = false;
+  hasStartedChat = false;
 
   constructor(private aiChatService: AiChatService) {}
 
@@ -35,6 +37,11 @@ export class AssistantAiComponent {
       this.errorMessage = `Message too long. Please limit to ${this.message_length_max} characters.`;
       return;
     }
+
+    this.hasStartedChat = true;
+    setTimeout(() => {
+      this.chatContainer?.nativeElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
 
     this.messages.push({ role: 'user', content: trimmed });
     const userInput = trimmed;
