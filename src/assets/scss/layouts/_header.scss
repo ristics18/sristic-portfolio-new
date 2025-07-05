@@ -10,9 +10,12 @@
     padding-bottom: 15px;
 }
 
-.header-logo{
-    // z-index: 999;
-    display: block;
+.header-logo {
+  display: block;
+}
+
+.header-logo h4 {
+  margin-bottom: 0px;
 }
 
 .header-nav{

@@ -2,13 +2,15 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AiChatService } from '../services/ai-chat-service';
+import { AppConstants } from '../constants/app.constants';
 
 @Component({
   selector: 'app-assistant-ai',
   standalone: true,
   templateUrl: './assistant-ai.component.html',
   styleUrl: './assistant-ai.component.scss',
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule],
+  providers: [AppConstants]
 })
 export class AssistantAiComponent {
   @ViewChild('chatBox') chatBoxRef!: ElementRef;
@@ -26,7 +28,7 @@ export class AssistantAiComponent {
   hasStartedChat = false;
   conversationId = '';
 
-  constructor(private aiChatService: AiChatService) {}
+  constructor(private aiChatService: AiChatService, public constants: AppConstants) {}
 
   ngOnInit(): void {
     this.conversationId = crypto.randomUUID();

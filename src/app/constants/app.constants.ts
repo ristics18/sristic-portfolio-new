@@ -9,7 +9,7 @@ export class AppConstants {
 
   readonly MY_FIRST_NAME = "Srdjan";
   readonly MY_LAST_NAME = "Ristić";
-  readonly MY_LOGO = "logo.png";
+  readonly MY_LOGO_TEXT = "SrdjanRistic();";
   readonly MY_IMAGE = "srdan_portrait_main.png";
   readonly MY_TITLE = "Software Engineer";
   readonly MY_EMAIL = "srdanristic2@gmail.com";
@@ -50,7 +50,7 @@ export class AppConstants {
       ExperienceName: "Software Development Team Lead",
       ExperienceCompany: "RedSail Technologies (PioneerRx)",
       ExperienceLink: "https://www.redsailtechnologies.com/",
-      ExperienceDate: "2023 - " + this.CURRENT_YEAR,
+      ExperienceDate: "2023 - Present",
       ExperienceDesc: "I am leading a team of five offshore developers, balancing technical and project management responsibilities to ensure the success of key initiatives. My role also involves collaborating closely with senior management and other team leads, contributing to the company's long-term goals and innovative strategies."
     },
     {
@@ -886,6 +886,8 @@ export class AppConstants {
       HobbyIcon: "icofont-hill"
     }
   ]
+
+  readonly AI_WARNING_MESSAGE = "The assistant has short-term memory. Refreshing or leaving the page resets it."
 
   readonly COPYRIGHT = "Copyright © " + new Date().getFullYear() + " - Srdjan Ristić";
 }

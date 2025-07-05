@@ -3713,6 +3713,10 @@ p:last-child {
   display: block;
 }
 
+.header-logo h4 {
+  margin-bottom: 0px;
+}
+
 .header-nav {
   display: flex;
 }
@@ -4331,4 +4335,8 @@ p:last-child {
   background-image: url(assets/images/icon/top-arrow.svg);
   background-position: center 50%;
   background-repeat: no-repeat;
+}
+
+.mobile-logo h4 {
+  margin-bottom: 0px;
 }
