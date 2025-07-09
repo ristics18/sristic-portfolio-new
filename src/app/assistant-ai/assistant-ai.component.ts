@@ -3,24 +3,21 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AiChatService } from '../services/ai-chat-service';
 import { AppConstants } from '../constants/app.constants';
-import { RecaptchaModule, RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-assistant-ai',
   standalone: true,
   templateUrl: './assistant-ai.component.html',
   styleUrl: './assistant-ai.component.scss',
-  imports: [CommonModule, FormsModule, RecaptchaModule],
+  imports: [CommonModule, FormsModule],
   providers: [AppConstants]
 })
 export class AssistantAiComponent {
   @ViewChild('chatBox') chatBoxRef!: ElementRef;
   @ViewChild('messageInput') messageInputRef!: ElementRef;
   @ViewChild('chatContainer') chatContainer!: ElementRef;
-  @ViewChild('captchaRef') captchaRef!: RecaptchaComponent;
 
-  public GOOGLE_SITE_KEY = '6Ld7iHsrAAAAAMUpZRHf3Y8CDLlvdK1W7dqbcX2c';
-  public RecaptchaToken: string | null = null;
+  public GOOGLE_SITE_KEY = '6LdS23wrAAAAAARexaE6xscYWNkATAumAuwEpCzP';
 
   message = '';
   messages: { role: 'user' | 'assistant'; content: string }[] = [
@@ -39,7 +36,7 @@ export class AssistantAiComponent {
     this.conversationId = crypto.randomUUID();
   }
 
-  sendMessage(): void {
+  sendMessage(reCaptchaToken: string): void {
     if (this.isWaitingForResponse) return;
 
     const trimmed = this.message.trim();
@@ -50,7 +47,7 @@ export class AssistantAiComponent {
       return;
     }
 
-    if (!this.RecaptchaToken || this.RecaptchaToken.length == 0) {
+    if (reCaptchaToken.length == 0) {
         this.messages.push({ role: 'assistant', content: 'Sorry, something is wrong with reCaptcha. Please try again.' });
         this.scrollToBottom();
         return;
@@ -71,7 +68,7 @@ export class AssistantAiComponent {
     this.typing = true;
     this.isWaitingForResponse = true;
   
-    this.aiChatService.sendMessage(userInput, this.conversationId, this.RecaptchaToken!).subscribe({
+    this.aiChatService.sendMessage(userInput, this.conversationId, reCaptchaToken).subscribe({
       next: (res) => {
         const fullAnswer = res.answer.trim();
         const assistantMessage = { role: 'assistant' as const, content: '' };
@@ -124,14 +121,15 @@ export class AssistantAiComponent {
   }
 
   onSendClick(): void {
-    this.captchaRef.execute();
+    if (!window.grecaptcha) {
+      console.error('reCAPTCHA not loaded');
+      return;
+    }
+
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute(this.GOOGLE_SITE_KEY, { action: 'chat' }).then((token: string) => {
+        this.sendMessage(token);
+      });
+    });
   }
-
-  onCaptchaResolved(token: string | null): void {
-    if (!token) return;
-
-    this.RecaptchaToken = token;
-    this.sendMessage();
-  }
-
 }
