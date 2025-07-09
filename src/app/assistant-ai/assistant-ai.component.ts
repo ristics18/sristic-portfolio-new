@@ -3,19 +3,24 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AiChatService } from '../services/ai-chat-service';
 import { AppConstants } from '../constants/app.constants';
+import { RecaptchaModule, RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-assistant-ai',
   standalone: true,
   templateUrl: './assistant-ai.component.html',
   styleUrl: './assistant-ai.component.scss',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RecaptchaModule],
   providers: [AppConstants]
 })
 export class AssistantAiComponent {
   @ViewChild('chatBox') chatBoxRef!: ElementRef;
   @ViewChild('messageInput') messageInputRef!: ElementRef;
   @ViewChild('chatContainer') chatContainer!: ElementRef;
+  @ViewChild('captchaRef') captchaRef!: RecaptchaComponent;
+
+  public GOOGLE_SITE_KEY = '6Ld7iHsrAAAAAMUpZRHf3Y8CDLlvdK1W7dqbcX2c';
+  public RecaptchaToken: string | null = null;
 
   message = '';
   messages: { role: 'user' | 'assistant'; content: string }[] = [
@@ -45,6 +50,12 @@ export class AssistantAiComponent {
       return;
     }
 
+    if (!this.RecaptchaToken || this.RecaptchaToken.length == 0) {
+        this.messages.push({ role: 'assistant', content: 'Sorry, something is wrong with reCaptcha. Please try again.' });
+        this.scrollToBottom();
+        return;
+    }
+
     this.hasStartedChat = true;
     setTimeout(() => {
       this.chatContainer?.nativeElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -59,8 +70,8 @@ export class AssistantAiComponent {
 
     this.typing = true;
     this.isWaitingForResponse = true;
-
-    this.aiChatService.sendMessage(userInput, this.conversationId).subscribe({
+  
+    this.aiChatService.sendMessage(userInput, this.conversationId, this.RecaptchaToken!).subscribe({
       next: (res) => {
         const fullAnswer = res.answer.trim();
         const assistantMessage = { role: 'assistant' as const, content: '' };
@@ -85,7 +96,7 @@ export class AssistantAiComponent {
       error: () => {
         this.typing = false;
         this.isWaitingForResponse = false;
-        this.messages.push({ role: 'assistant', content: 'Sorry, something went wrong. Try again.' });
+        this.messages.push({ role: 'assistant', content: 'Sorry, something went wrong. Please try again.' });
         this.scrollToBottom();
       }
     });
@@ -100,7 +111,7 @@ export class AssistantAiComponent {
   handleKeydown(event: KeyboardEvent): void {
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
-      this.sendMessage();
+      this.onSendClick();
     }
   }
 
@@ -111,4 +122,16 @@ export class AssistantAiComponent {
       }
     });
   }
+
+  onSendClick(): void {
+    this.captchaRef.execute();
+  }
+
+  onCaptchaResolved(token: string | null): void {
+    if (!token) return;
+
+    this.RecaptchaToken = token;
+    this.sendMessage();
+  }
+
 }

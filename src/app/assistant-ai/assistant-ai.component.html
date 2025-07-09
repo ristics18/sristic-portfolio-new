@@ -40,7 +40,7 @@
             </div>
           </div>
 
-          <form class="chat-input-form mt-2 px-2 pt-2 pb-1" (submit)="sendMessage()" [attr.disabled]="isWaitingForResponse ? true : null">
+          <form class="chat-input-form mt-2 px-2 pt-2 pb-1" (submit)="onSendClick()" [attr.disabled]="isWaitingForResponse ? true : null">
             <div class="position-relative">
               <textarea
                 [(ngModel)]="message"
@@ -85,3 +85,9 @@
     </div>
   </div>
 </div>
+<re-captcha
+  #captchaRef
+  [siteKey]="GOOGLE_SITE_KEY"
+  size="invisible"
+  (resolved)="onCaptchaResolved($event)">
+</re-captcha>
