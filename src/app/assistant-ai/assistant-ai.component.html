@@ -24,7 +24,7 @@
             <span class="fw-bold text-white">AI Assistant</span>
           </div>
           
-          <div class="chat-scroll-area flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3 px-2" #chatBox>
+          <div class="chat-scroll-area flex-grow-1 overflow-auto d-flex flex-column gap-3 mb-3 px-2 pb-1" #chatBox>
             <ng-container *ngFor="let msg of messages">
               <div class="d-flex" [ngClass]="msg.role === 'user' ? 'justify-content-end' : 'justify-content-start'">
                 <div class="chat-bubble" [ngClass]="msg.role === 'user' ? 'bg-color-primary text-white' : 'bg-color-light text-black'">{{ msg.content }}</div>
