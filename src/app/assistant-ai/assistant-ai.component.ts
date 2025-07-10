@@ -70,7 +70,7 @@ export class AssistantAiComponent {
   
     this.aiChatService.sendMessage(userInput, this.conversationId, reCaptchaToken).subscribe({
       next: (res) => {
-        const fullAnswer = res.answer.trim();
+        const fullAnswer = res.answer;
         const assistantMessage = { role: 'assistant' as const, content: '' };
         this.messages.push(assistantMessage);
         this.scrollToBottom();
