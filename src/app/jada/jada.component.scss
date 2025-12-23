@@ -89,7 +89,7 @@
 /* bottom text + scroll */
 .bottom-stack {
   position: absolute;
-  bottom: 110px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -125,6 +125,21 @@
   align-items: center;
   gap: 8px;
   opacity: 0.95;
+
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  text-align: center;
+  color: #fff;
+  padding: 0 18px;
+  width: min(900px, 92vw);
 }
 
 .arrow {
@@ -133,7 +148,6 @@
   border-right: 2px solid rgba(255, 255, 255, 0.95);
   border-bottom: 2px solid rgba(255, 255, 255, 0.95);
   transform: rotate(45deg);
-  animation: bounce 1.4s ease-in-out infinite;
 }
 
 .label {
