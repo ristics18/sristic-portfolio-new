@@ -51,7 +51,7 @@ export class AppConstants {
       ExperienceCompany: "RedSail Technologies (PioneerRx)",
       ExperienceLink: "https://www.redsailtechnologies.com/",
       ExperienceDate: "2023 - Present",
-      ExperienceDesc: "I am leading a team of five offshore developers, balancing technical and project management responsibilities to ensure the success of key initiatives. My role also involves collaborating closely with senior management and other team leads, contributing to the company's long-term goals and innovative strategies."
+      ExperienceDesc: "I am leading a team of 6 developers (5 offshore and 1 onshore), balancing technical and project management responsibilities to ensure the success of key initiatives. My role also involves collaborating closely with senior management and other team leads, contributing to the company's long-term goals and innovative strategies."
     },
     {
       ExperienceName: "Software Developer",
