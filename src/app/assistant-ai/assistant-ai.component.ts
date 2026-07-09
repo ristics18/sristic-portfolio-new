@@ -70,6 +70,14 @@ export class AssistantAiComponent {
   
     this.aiChatService.sendMessage(userInput, this.conversationId, reCaptchaToken).subscribe({
       next: (res) => {
+        if (res.answer === undefined || res.message == "Something went wrong. Please try again later.") {
+          this.typing = false;
+          this.isWaitingForResponse = false;
+          this.messages.push({ role: 'assistant', content: 'Sorry, something went wrong. Please try again.' });
+          this.scrollToBottom();
+          return;
+        }
+
         const fullAnswer = res.answer;
         const assistantMessage = { role: 'assistant' as const, content: '' };
         this.messages.push(assistantMessage);
