@@ -47,15 +47,22 @@ export class AppConstants {
 
   readonly EXPERIENCES = [
     {
-      ExperienceName: "Software Development Team Lead",
-      ExperienceCompany: "RedSail Technologies (PioneerRx)",
+      ExperienceName: "Software Development Manager",
+      ExperienceCompany: "RedSail Technologies",
       ExperienceLink: "https://www.redsailtechnologies.com/",
-      ExperienceDate: "2023 - Present",
-      ExperienceDesc: "I am leading a team of 6 developers (5 offshore and 1 onshore), balancing technical and project management responsibilities to ensure the success of key initiatives. My role also involves collaborating closely with senior management and other team leads, contributing to the company's long-term goals and innovative strategies."
+      ExperienceDate: "2026 - Present",
+      ExperienceDesc: "I am managing a team of both onshore and offshore developers. My role involves collaborating closely with the leadership team, contributing to the company's long-term goals and innovative strategies."
+    },
+    {
+      ExperienceName: "Software Development Team Lead",
+      ExperienceCompany: "RedSail Technologies",
+      ExperienceLink: "https://www.redsailtechnologies.com/",
+      ExperienceDate: "2023 - 2026",
+      ExperienceDesc: "I am leading a team of six developers (five offshore and one onshore), balancing technical and project management responsibilities to ensure the success of key initiatives. My primary focus is on development, code reviews, project planning, deliveries, leadership, mentoring and team building."
     },
     {
       ExperienceName: "Software Developer",
-      ExperienceCompany: "PioneerRx",
+      ExperienceCompany: "RedSail Technologies (PioneerRx)",
       ExperienceLink: "https://www.pioneerrx.com/",
       ExperienceDate: "2018 - 2023",
       ExperienceDesc: "Developed desktop application for independent pharmacies using C# and SQL technologies. My main focus was on the implementation of data synchronization processes between pharmacies. I was also involved in the Azure DevOps CI/CD development."
